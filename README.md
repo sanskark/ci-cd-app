@@ -1,12 +1,12 @@
 # **Project Overview**
 
-This project demonstrates a production-style CI/CD pipeline that automates the entire application delivery lifecycle using Jenkins, Docker, and AWS EC2.
+This project demonstrates a production-style CI/CD pipeline that automates the entire application delivery lifecycle using Jenkins, Docker, AWS ECR, and AWS EC2.
 ***
 Whenever a developer pushes code to GitHub, Jenkins automatically
 
 1. Pulls the latest code
 2. Builds a Docker image
-3. Pushes the image to Docker Hub
+3. Pushes the image to AWS ECR
 4. Deploys the updated application as a Docker container on AWS EC2
 
 The goal of his project is to showcase hands-on DevOps skills, including CI/CD automation, containerization, secure credential handling, and cloud deployment.
@@ -22,7 +22,7 @@ The goal of his project is to showcase hands-on DevOps skills, including CI/CD a
 5. Docker Image Build
    * Application is containerized using a Dockerfile.
 6. Docker Image Push
-   * Built image is pushed to Docker Hub with a unique build tag.
+   * Built image is pushed to AWS ECR with a unique build tag.
 7. Deployment
    * Jenkins runs a deployment script that stops the old container
    * Starts a new container with the latest image
@@ -40,4 +40,4 @@ The goal of his project is to showcase hands-on DevOps skills, including CI/CD a
 | OS                   | Amazon Linux |
 | Programming Language | Python       |
 | Web Framework        | Flask        |
-| Container Registry   | Docker Hub   |
+| Container Registry   | AWS ECR      |
